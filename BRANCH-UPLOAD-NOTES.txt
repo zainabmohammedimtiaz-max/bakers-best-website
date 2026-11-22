@@ -1,0 +1,5 @@
+PERSONAL BRANCH ADD-ON
+Upload these files into the repository root while checked out on your own
+branch. Do not upload another index.html or replace the shared core CSS/JS.
+The pages use the shared bakers-best-core.css and bakers-best-site.js from main.
+The cake studio page additionally uses its uniquely named CSS and JS files.

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Join the Bakers Best rewards club and earn points with every visit.">
+  <title>Rewards Club | Bakers Best</title>
+  <link rel="stylesheet" href="bakers-best-core.css">
+  <script src="bakers-best-site.js" defer></script>
+</head>
+<body class="rewards-page">
+  <div class="announcement">A little thank-you for making us part of your day. <span>Welcome to the club.</span></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Bakers Best home"><img src="images/logo.png" alt="Bakers Best logo"></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a><a href="products.html">The collection</a><a href="team.html">Our story</a><a href="workshops.html">Workshops</a>
+      <a href="bakers-best-sponsors.html">Sponsors</a>
+      <a href="bakers-best-cake-studio.html">Build a cake</a><a href="contact.html">Contact</a><a class="nav-rewards active" href="bakers-best-rewards-club.html">Rewards <span>✳</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="rewards-hero">
+      <div class="rewards-hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> THE BAKERS BEST CLUB</p>
+        <h1>A little more<br><em>to love.</em></h1>
+        <p>For the regulars, the treat-yourselfers and everyone who believes a good pastry can make a day. Earn points as you go, then turn them into something lovely.</p>
+        <a class="button button-light" href="#join">Become a member <span>↘</span></a>
+      </div>
+      <div class="rewards-seal"><div class="seal-ring">BAKERS BEST · THE GOOD THINGS CLUB · </div><div class="seal-center"><span>✳</span><strong>BB</strong><small>EST. 2026</small></div></div>
+      <span class="hero-side-note">A THANK-YOU, FROM US TO YOU</span>
+    </section>
+
+    <section class="how-section section-pad">
+      <div class="section-kicker">01 / HOW IT WORKS</div>
+      <div class="section-heading"><h2>Good things add <em>up.</em></h2><p>Every visit brings you a little closer to your next favourite treat. No complicated rules — just lovely rewards.</p></div>
+      <div class="steps-grid">
+        <article class="step-card"><span class="step-number">01</span><div class="step-icon">✳</div><h3>Join the club</h3><p>Sign up in a moment. Membership is free, and the good stuff starts straight away.</p></article>
+        <article class="step-card"><span class="step-number">02</span><div class="step-icon">＋</div><h3>Collect points</h3><p>Earn 1 point for every AED 1 spent on eligible bakery purchases.</p></article>
+        <article class="step-card"><span class="step-number">03</span><div class="step-icon">♡</div><h3>Enjoy a treat</h3><p>Redeem your points for bakery favourites, little extras and special experiences.</p></article>
+      </div>
+    </section>
+
+    <section class="calculator-section section-pad">
+      <div class="calculator-copy"><div class="section-kicker">02 / YOUR LITTLE CALCULATOR</div><h2>How sweet could<br><em>it be?</em></h2><p>Move the slider to see how quickly your everyday bakery visits could turn into a treat.</p><div class="calc-footnote">Illustrative example: 1 point per AED 1 spent. Rewards and redemption thresholds are subject to the club terms.</div></div>
+      <div class="calculator-card">
+        <label for="spendRange">Your average monthly spend</label>
+        <div class="spend-value"><span>AED</span><strong id="spendValue">250</strong></div>
+        <input type="range" id="spendRange" min="50" max="1000" step="50" value="250">
+        <div class="range-labels"><span>AED 50</span><span>AED 1,000</span></div>
+        <div class="points-result"><div><span>POINTS IN A MONTH</span><strong id="monthlyPoints">250</strong></div><div><span>POINTS IN A YEAR</span><strong id="yearlyPoints">3,000</strong></div></div>
+        <p class="calc-note">A little something to look forward to, every time.</p>
+      </div>
+    </section>
+
+    <section class="perks-section section-pad">
+      <div class="section-heading"><div><div class="section-kicker">03 / THE LOVELY EXTRAS</div><h2>More than <em>points.</em></h2></div><p>Being part of the club comes with a few thoughtful touches.</p></div>
+      <div class="perks-grid">
+        <article class="perk"><span>✳</span><div><h3>Birthday sweetness</h3><p>A little birthday treat, on us. Because celebrations deserve cake.</p></div></article>
+        <article class="perk"><span>◷</span><div><h3>First tastes</h3><p>Get early access to seasonal specials and limited-edition bakes.</p></div></article>
+        <article class="perk"><span>✿</span><div><h3>Club invitations</h3><p>Be first to hear about tastings, workshops and special bakery evenings.</p></div></article>
+        <article class="perk"><span>♡</span><div><h3>Little surprises</h3><p>Occasional extras, just to say thank you for coming back.</p></div></article>
+      </div>
+    </section>
+
+    <section class="join-section section-pad" id="join">
+      <div class="join-copy"><div class="section-kicker">04 / YOUR PLACE AT OUR TABLE</div><h2>Come on in.<br><em>It's lovely here.</em></h2><p>Join Bakers Best Rewards and make every visit count. Fill in the details and we'll welcome you to the club.</p><div class="join-decoration">✳ <span>GOOD THINGS<br>ARE BETTER SHARED</span> ✳</div></div>
+      <form id="rewardsForm" class="join-form" novalidate>
+        <div class="form-title"><span>MEMBERSHIP FORM</span><span>01 — 04</span></div>
+        <label for="memberName">Full name</label><input type="text" id="memberName" name="memberName" placeholder="Your full name" required>
+        <label for="memberEmail">Email address</label><input type="email" id="memberEmail" name="memberEmail" placeholder="you@example.com" required>
+        <label for="memberPhone">Mobile number</label><input type="tel" id="memberPhone" name="memberPhone" placeholder="+971 5X XXX XXXX" required>
+        <label class="consent"><input type="checkbox" id="memberConsent" required><span>I'd like to join the Bakers Best Rewards Club and agree to receive membership updates.</span></label>
+        <button class="button button-dark" type="submit">Join the club <span>↗</span></button>
+        <p class="form-message" id="rewardsMessage" aria-live="polite"></p>
+        <p class="privacy-note">Your details are used for this course-project demonstration only. This form does not send data to a server.</p>
+      </form>
+    </section>
+
+    <section class="faq-section section-pad">
+      <div class="section-kicker">05 / A FEW GOOD QUESTIONS</div><h2>Good to <em>know.</em></h2>
+      <div class="faq-list">
+        <article class="faq-item"><button class="faq-question" aria-expanded="false">Is joining the club free? <span>＋</span></button><p class="faq-answer">Yes. Membership is free — simply complete the form above to see the on-page confirmation.</p></article>
+        <article class="faq-item"><button class="faq-question" aria-expanded="false">How do I earn points? <span>＋</span></button><p class="faq-answer">In this concept, members earn 1 point for every AED 1 spent on eligible purchases. The calculator above shows an example of how points add up.</p></article>
+        <article class="faq-item"><button class="faq-question" aria-expanded="false">Can I use the rewards online? <span>＋</span></button><p class="faq-answer">This student project is a front-end demonstration. Online accounts, payments and live point balances are not connected to a backend.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top"><a href="index.html" class="footer-brand">Bakers<br><em>Best.</em></a><p>Thoughtful bakes for<br>the beautifully ordinary.</p><div class="footer-links"><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a><a href="contact.html">Say hello ↗</a><a href="index.html">Back to home ↗</a></div></div>
+    <div class="footer-bottom"><span>© 2026 Bakers Best</span><span>MADE SLOWLY · ENJOYED FULLY</span><a href="index.html">Home ↑</a></div>
+  </footer>
+</body>
+</html>
