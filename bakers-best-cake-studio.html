@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Design a celebration cake with the Bakers Best live cake builder.">
+  <title>Build My Cake | Bakers Best</title>
+  <link rel="stylesheet" href="bakers-best-core.css">
+  <link rel="stylesheet" href="bakers-best-cake-studio.css">
+  <script src="bakers-best-site.js" defer></script>
+  <script src="bakers-best-cake-studio.js" defer></script>
+</head>
+<body class="builder-page">
+  <div class="announcement">A cake as individual as the occasion. <span>Made your way, with care.</span></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Bakers Best home"><img src="images/logo.png" alt="Bakers Best logo"></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a><a href="products.html">The collection</a><a href="team.html">Our story</a>
+      <a href="workshops.html">Workshops</a><a href="bakers-best-sponsors.html">Sponsors</a>
+      <a class="active" href="bakers-best-cake-studio.html">Build a cake</a><a href="contact.html">Contact</a>
+      <a class="nav-rewards" href="bakers-best-rewards-club.html">Rewards <span>✳</span></a>
+    </nav>
+  </header>
+  <main>
+    <section class="builder-heading">
+      <p class="eyebrow"><span class="eyebrow-line"></span> THE BAKERS BEST CAKE STUDIO</p>
+      <h1>Your cake.<br><em>Your canvas.</em></h1>
+      <p>Choose your layers, flavours, finish and all the lovely little details. Your cake takes shape as you dream it up.</p>
+      <div class="builder-heading-note">MADE FOR YOUR MOMENT MADE BY HAND</div>
+    </section>
+
+    <section class="builder-workspace">
+      <div class="builder-controls">
+        <div class="builder-progress"><span>YOUR DESIGN</span><span id="stepCounter">01 / 06</span></div>
+        <form id="cakeForm">
+          <section class="builder-step">
+            <div class="step-heading"><span>01</span><div><h2>The occasion</h2><p>What are we celebrating?</p></div></div>
+            <div class="choice-grid occasion-grid">
+              <label class="choice-card"><input type="radio" name="occasion" value="Birthday" checked><span>✦</span><b>Birthday</b></label>
+              <label class="choice-card"><input type="radio" name="occasion" value="Wedding"><span>♡</span><b>Wedding</b></label>
+              <label class="choice-card"><input type="radio" name="occasion" value="Anniversary"><span>✿</span><b>Anniversary</b></label>
+              <label class="choice-card"><input type="radio" name="occasion" value="Just because"><span>✳</span><b>Just because</b></label>
+            </div>
+          </section>
+
+          <section class="builder-step">
+            <div class="step-heading"><span>02</span><div><h2>Shape &amp; size</h2><p>Set the scale of your celebration.</p></div></div>
+            <label class="field-label" for="cakeShape">Cake shape</label>
+            <select id="cakeShape" name="shape"><option value="Round">Classic round</option><option value="Heart">Heart-shaped</option><option value="Square">Modern square</option></select>
+            <label class="field-label" for="cakeLayers">Number of tiers</label>
+            <div class="range-line"><input type="range" id="cakeLayers" min="1" max="5" value="2"><strong><span id="layerValue">2</span> tiers</strong></div>
+            <label class="field-label" for="cakeSize">Serving size</label>
+            <select id="cakeSize" name="size"><option value="Small · 8–10 servings" data-price="140">Small · 8–10 servings</option><option value="Medium · 12–16 servings" data-price="210" selected>Medium · 12–16 servings</option><option value="Large · 20–25 servings" data-price="310">Large · 20–25 servings</option><option value="Grand · 30+ servings" data-price="440">Grand · 30+ servings</option></select>
+          </section>
+
+          <section class="builder-step">
+            <div class="step-heading"><span>03</span><div><h2>The sponge</h2><p>Choose the flavour at the heart of it.</p></div></div>
+            <div class="swatch-options">
+              <label class="swatch-option"><input type="radio" name="flavour" value="Vanilla bean" data-price="0" checked><span class="flavour-swatch vanilla"></span><b>Vanilla bean</b><small>Soft &amp; fragrant</small></label>
+              <label class="swatch-option"><input type="radio" name="flavour" value="Dark chocolate" data-price="8"><span class="flavour-swatch chocolate"></span><b>Dark chocolate</b><small>Deep &amp; rich</small></label>
+              <label class="swatch-option"><input type="radio" name="flavour" value="Lemon zest" data-price="6"><span class="flavour-swatch lemon"></span><b>Lemon zest</b><small>Bright &amp; fresh</small></label>
+              <label class="swatch-option"><input type="radio" name="flavour" value="Pistachio" data-price="12"><span class="flavour-swatch pistachio"></span><b>Pistachio</b><small>Nutty &amp; delicate</small></label>
+              <label class="swatch-option"><input type="radio" name="flavour" value="Red velvet" data-price="8"><span class="flavour-swatch velvet"></span><b>Red velvet</b><small>Cocoa &amp; velvet</small></label>
+              <label class="swatch-option"><input type="radio" name="flavour" value="Almond &amp; rose" data-price="12"><span class="flavour-swatch almond"></span><b>Almond &amp; rose</b><small>Floral &amp; soft</small></label>
+            </div>
+          </section>
+
+          <section class="builder-step">
+            <div class="step-heading"><span>04</span><div><h2>Fill &amp; layer</h2><p>Pick the centre of every slice.</p></div></div>
+            <label class="field-label" for="filling">Filling</label>
+            <select id="filling" name="filling"><option>None</option><option>Vanilla mascarpone</option><option>Raspberry compote</option><option>Salted caramel</option><option>Lemon curd</option><option>Dark chocolate ganache</option><option>Pistachio praline</option><option>Strawberry &amp; rose</option><option>Apricot preserve</option></select>
+            <label class="field-label" for="icing">Between-layer icing</label>
+            <select id="icing" name="icing"><option>None</option><option>Swiss meringue buttercream</option><option>Whipped cream</option><option>Cream cheese frosting</option><option>Chocolate ganache</option><option>Mascarpone cream</option></select>
+          </section>
+
+          <section class="builder-step">
+            <div class="step-heading"><span>05</span><div><h2>The finish</h2><p>Choose the frosting style and colour.</p></div></div>
+            <label class="field-label" for="frosting">Frosting style</label>
+            <select id="frosting" name="frosting"><option>Silky smooth</option><option>Rustic buttercream</option><option>Vintage piped</option><option>Textured palette-knife</option><option>Glossy ganache drip</option><option>Naked cake</option></select>
+            <p class="field-label">Frosting colour</p>
+            <div class="colour-options">
+              <label title="Ivory"><input type="radio" name="colour" value="#f4e8ce" checked><span style="--swatch:#f4e8ce"></span></label>
+              <label title="Butter yellow"><input type="radio" name="colour" value="#e9cb72"><span style="--swatch:#e9cb72"></span></label>
+              <label title="Sage"><input type="radio" name="colour" value="#a8ad82"><span style="--swatch:#a8ad82"></span></label>
+              <label title="Blush peach"><input type="radio" name="colour" value="#e5a18b"><span style="--swatch:#e5a18b"></span></label>
+              <label title="Dusty lavender"><input type="radio" name="colour" value="#b8a0bb"><span style="--swatch:#b8a0bb"></span></label>
+              <label title="Berry"><input type="radio" name="colour" value="#874457"><span style="--swatch:#874457"></span></label>
+              <label title="Chocolate"><input type="radio" name="colour" value="#694238"><span style="--swatch:#694238"></span></label>
+              <label title="Pistachio"><input type="radio" name="colour" value="#a3a66e"><span style="--swatch:#a3a66e"></span></label>
+              <label title="Choose custom colour"><input type="radio" name="colour" value="custom"><span class="custom-swatch">＋</span></label>
+            </div>
+            <label class="field-label" for="customColour">Or choose your own colour</label>
+            <input type="color" id="customColour" value="#d8a2a0" class="custom-colour-input">
+          </section>
+
+          <section class="builder-step">
+            <div class="step-heading"><span>06</span><div><h2>The finishing touches</h2><p>More is more. Choose as many as you like.</p></div></div>
+            <p class="field-label">Flowers &amp; botanicals</p>
+            <div class="topping-grid">
+              <label><input type="checkbox" name="topping" value="Edible roses" data-price="18">Edible roses</label>
+              <label><input type="checkbox" name="topping" value="Daisies" data-price="14">Daisies</label>
+              <label><input type="checkbox" name="topping" value="Violas" data-price="18">Violas</label>
+              <label><input type="checkbox" name="topping" value="Lavender" data-price="12">Lavender</label>
+              <label><input type="checkbox" name="topping" value="Rosemary sprigs" data-price="8">Rosemary</label>
+              <label><input type="checkbox" name="topping" value="Baby's breath" data-price="12">Baby's breath</label>
+            </div>
+            <p class="field-label">Fruit &amp; citrus</p>
+            <div class="topping-grid">
+              <label><input type="checkbox" name="topping" value="Fresh strawberries" data-price="12">Strawberries</label>
+              <label><input type="checkbox" name="topping" value="Raspberries" data-price="14">Raspberries</label>
+              <label><input type="checkbox" name="topping" value="Blueberries" data-price="12">Blueberries</label>
+              <label><input type="checkbox" name="topping" value="Figs" data-price="16">Figs</label>
+              <label><input type="checkbox" name="topping" value="Candied orange" data-price="10">Candied orange</label>
+              <label><input type="checkbox" name="topping" value="Lemon slices" data-price="8">Lemon slices</label>
+              <label><input type="checkbox" name="topping" value="Cherries" data-price="12">Cherries</label>
+              <label><input type="checkbox" name="topping" value="Pomegranate" data-price="12">Pomegranate</label>
+            </div>
+            <p class="field-label">Sprinkles, crunch &amp; extras</p>
+            <div class="topping-grid">
+              <label><input type="checkbox" name="topping" value="Gold leaf" data-price="25">Gold leaf</label>
+              <label><input type="checkbox" name="topping" value="Pearl sprinkles" data-price="10">Pearl sprinkles</label>
+              <label><input type="checkbox" name="topping" value="Rainbow sprinkles" data-price="8">Rainbow sprinkles</label>
+              <label><input type="checkbox" name="topping" value="Chocolate curls" data-price="12">Chocolate curls</label>
+              <label><input type="checkbox" name="topping" value="Pistachio crumb" data-price="12">Pistachio crumb</label>
+              <label><input type="checkbox" name="topping" value="Meringue kisses" data-price="14">Meringue kisses</label>
+              <label><input type="checkbox" name="topping" value="Macarons" data-price="18">Mini macarons</label>
+              <label><input type="checkbox" name="topping" value="Caramel shards" data-price="14">Caramel shards</label>
+            </div>
+            <label class="field-label" for="cakeMessage">A message on the cake (optional)</label>
+            <input type="text" id="cakeMessage" maxlength="32" placeholder="e.g. Happy Birthday, Amira">
+            <label class="field-label" for="extraNotes">Any other little details?</label>
+            <textarea id="extraNotes" rows="3" placeholder="Tell us about your vision, colours, theme or special requests..."></textarea>
+          </section>
+        </form>
+      </div>
+
+      <aside class="cake-preview-panel">
+        <div class="preview-topline"><span>YOUR CAKE, TAKING SHAPE</span><span>LIVE PREVIEW ✳</span></div>
+        <div class="cake-stage">
+          <div class="cake-backdrop-circle"></div>
+          <div id="cakePreview" class="cake-preview" aria-label="Live illustration of your custom cake">
+            <div class="cake-decoration" id="cakeDecor"></div>
+            <div class="cake-tiers" id="cakeTiers"></div>
+            <div class="cake-plate"></div>
+          </div>
+          <div class="preview-sparkle sparkle-a">✳</div><div class="preview-sparkle sparkle-b">✿</div>
+        </div>
+        <div class="preview-caption"><span>AN ORIGINAL BY YOU</span><span id="previewOccasion">BIRTHDAY CAKE</span></div>
+        <div class="order-summary">
+          <div class="summary-heading"><h3>Your recipe</h3><span>BB / CUSTOM</span></div>
+          <div id="summaryDetails" class="summary-details">2 tiers · Vanilla bean · Vanilla mascarpone</div>
+          <div class="summary-price"><span>ESTIMATED FROM</span><strong id="estimatedPrice">AED 210</strong></div>
+          <p class="estimate-note">A guide price for this class-project demo. Final quotes depend on design, availability and bakery confirmation.</p>
+          <button type="button" class="button button-dark summary-button" id="reviewCake">Review my cake <span>↗</span></button>
+        </div>
+      </aside>
+    </section>
+
+    <section class="builder-bottom section-pad">
+      <div><div class="section-kicker">A NOTE FROM OUR KITCHEN</div><h2>Dream it up.<br><em>We'll bake it.</em></h2></div>
+      <p>Every celebration cake is finished by hand. Your live preview is an illustration to help you imagine the design; our team will confirm the final details with you before an order is placed.</p>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="cakeModal" aria-hidden="true">
+    <div class="cake-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" class="modal-close" id="closeModal" aria-label="Close">×</button>
+      <p class="section-kicker">YOUR CUSTOM CREATION</p><h2 id="modalTitle">A cake made <em>by you.</em></h2>
+      <div id="modalSummary"></div>
+      <p class="modal-disclaimer">This is a front-end project demonstration. No order or payment is submitted. In a real bakery, this summary would be sent to the team for a quote.</p>
+      <button type="button" class="button button-dark" id="copyCake">Copy cake brief <span>↗</span></button>
+      <p class="form-message" id="copyMessage" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-top"><a href="index.html" class="footer-brand">Bakers<br><em>Best.</em></a><p>Thoughtful bakes for<br>the beautifully ordinary.</p><div class="footer-links"><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a><a href="contact.html">Say hello ↗</a><a href="bakers-best-rewards-club.html">Rewards club ↗</a></div></div>
+    <div class="footer-bottom"><span>© 2026 Bakers Best</span><span>MADE SLOWLY · ENJOYED FULLY</span><a href="index.html">Home ↑</a></div>
+  </footer>
+</body>
+</html>
